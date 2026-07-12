@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bajo Cero° | Aires Acondicionados</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Íconos Modernos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Encabezado y Navegación -->
+    <header>
+        <div class="logo"><i class="fa-solid fa-snowflake animate-snowflake"></i> Bajo Cero°</div>
+        <nav>
+            <a href="#inicio">Inicio</a>
+            <a href="#servicios">Servicios</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+    </header>
+
+    <!-- Héroe / Presentación Principal -->
+    <section id="inicio" class="hero">
+        <h1>Venta, Mantenimiento y Reparación de Aires Acondicionados</h1>
+        <p>Mantén tu espacio fresco y cómodo con expertos en climatización.</p>
+        <a href="#contacto" class="btn-principal">Cotizar Servicio</a>
+    </section>
+
+    <!-- Sección de Servicios -->
+    <section id="servicios" class="servicios">
+        <h2>Nuestros Servicios</h2>
+        <div class="contenedor-tarjetas">
+            
+            <div class="tarjeta">
+                <div class="icono-servicio"><i class="fa-solid fa-dolly"></i></div>
+                <h3>Venta de Equipos</h3>
+                <p>Te asesoramos para elegir el aire acondicionado ideal para tu hogar o negocio con las mejores marcas del mercado.</p>
+            </div>
+
+            <div class="tarjeta">
+                <div class="icono-servicio"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+                <h3>Mantenimiento</h3>
+                <p>Limpieza profunda, revisión de gas y optimización para evitar fallas futuras y reducir tu consumo de luz.</p>
+            </div>
+
+            <div class="tarjeta">
+                <div class="icono-servicio"><i class="fa-solid fa-triangle-exclamation"></i></div>
+                <h3>Reparación</h3>
+                <p>Diagnóstico rápido y solución a problemas de enfriamiento, ruidos extraños o fallas eléctricas.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Sección de Contacto -->
+    <section id="contacto" class="contacto">
+        <h2>Contáctanos por WhatsApp</h2>
+        <p>¿Tienes alguna falla o necesitas una instalación? Al enviar el formulario se abrirá tu chat.</p>
+        
+        <form id="formulario-contacto">
+            <input type="text" id="nombre" placeholder="Tu Nombre" required>
+            <input type="tel" id="telefono" placeholder="Tu Teléfono (10 dígitos)" required>
+            <select id="servicio-interes">
+                <option value="Mantenimiento">Mantenimiento</option>
+                <option value="Reparación">Reparación</option>
+                <option value="Compra de Equipo">Compra de Equipo</option>
+            </select>
+            <textarea id="mensaje" placeholder="Detalles de tu solicitud (ej. Mi minisplit no enfría)"></textarea>
+            <button type="submit"><i class="fa-brands fa-whatsapp"></i> Enviar a WhatsApp</button>
+        </form>
+    </section>
+
+    <!-- Botón Flotante de WhatsApp -->
+    <a href="https://wa.me/522841023692?text=Hola%20Bajo%20Cero°,%20necesito%20información." class="btn-flotante-wp" target="_blank" rel="noopener noreferrer">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <!-- Pie de Página -->
+    <footer>
+        <p>&copy; 2026 Bajo Cero°. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

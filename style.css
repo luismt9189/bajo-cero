@@ -1,0 +1,339 @@
+/* Estilos Globales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+:root {
+    --azul-primario: #0056b3;
+    --azul-oscuro: #002d62;
+    --azul-claro: #e6f2ff;
+    --celeste: #00a8e8;
+    --gris-oscuro: #333333;
+    --gris-claro: #f8f9fa;
+    --blanco: #ffffff;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--blanco);
+    color: var(--gris-oscuro);
+    line-height: 1.6;
+}
+
+/* Encabezado y Navegación */
+header {
+    background-color: var(--azul-oscuro);
+    color: var(--blanco);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+header .logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--celeste);
+    letter-spacing: 1px;
+}
+
+header nav a {
+    color: var(--blanco);
+    text-decoration: none;
+    margin-left: 1.5rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+header nav a:hover {
+    color: var(--celeste);
+}
+
+/* Sección Héroe (Presentación) */
+.hero {
+    background: linear-gradient(rgba(0, 45, 98, 0.8), rgba(0, 86, 179, 0.6)), 
+                url('https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=1200&q=80') no-repeat center center/cover;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--blanco);
+    padding: 0 1rem;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    max-width: 800px;
+    font-weight: 700;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    max-width: 600px;
+}
+
+.btn-principal {
+    background-color: var(--celeste);
+    color: var(--blanco);
+    padding: 0.8rem 2rem;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn-principal:hover {
+    background-color: #0084b8;
+    transform: translateY(-2px);
+}
+
+/* Sección de Servicios */
+.servicios {
+    padding: 5rem 5%;
+    background-color: var(--gris-claro);
+    text-align: center;
+}
+
+.servicios h2 {
+    font-size: 2.2rem;
+    margin-bottom: 3rem;
+    color: var(--azul-oscuro);
+    position: relative;
+}
+
+.servicios h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: var(--celeste);
+    margin: 0.5rem auto 0 auto;
+    border-radius: 2px;
+}
+
+.contenedor-tarjetas {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.tarjeta {
+    background-color: var(--blanco);
+    padding: 2.5rem 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    width: 300px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-top: 5px solid var(--azul-primario);
+}
+
+.tarjeta:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 86, 179, 0.15);
+}
+
+.tarjeta h3 {
+    font-size: 1.4rem;
+    color: var(--azul-oscuro);
+    margin-bottom: 1rem;
+}
+
+.tarjeta p {
+    font-size: 0.95rem;
+    color: #666;
+}
+
+/* Sección de Contacto */
+.contacto {
+    padding: 5rem 5%;
+    text-align: center;
+    background-color: var(--blanco);
+}
+
+.contacto h2 {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+    color: var(--azul-oscuro);
+}
+
+.contacto p {
+    margin-bottom: 2.5rem;
+    color: #555;
+}
+
+#formulario-contacto {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    background-color: var(--azul-claro);
+    padding: 2.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+#formulario-contacto input,
+#formulario-contacto select,
+#formulario-contacto textarea {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+#formulario-contacto input:focus,
+#formulario-contacto select:focus,
+#formulario-contacto textarea:focus {
+    border-color: var(--azul-primario);
+}
+
+#formulario-contacto textarea {
+    height: 120px;
+    resize: none;
+}
+
+#formulario-contacto button {
+    background-color: var(--azul-oscuro);
+    color: var(--blanco);
+    border: none;
+    padding: 1rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#formulario-contacto button:hover {
+    background-color: var(--azul-primario);
+}
+
+/* Pie de Página */
+footer {
+    background-color: var(--azul-oscuro);
+    color: var(--blanco);
+    text-align: center;
+    padding: 1.5rem;
+    font-size: 0.9rem;
+    border-top: 3px solid var(--celeste);
+}
+
+/* Responsivo (Celulares) */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+    
+    header nav a {
+        margin: 0 0.7rem;
+    }
+
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .contenedor-tarjetas {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #formulario-contacto {
+        padding: 1.5rem;
+    }
+}
+/* --- Nuevos Estilos Llamativos --- */
+
+/* Animación sutil para el copo de nieve del logo */
+.animate-snowflake {
+    animation: spin 8s linear infinite;
+    display: inline-block;
+    margin-right: 5px;
+}
+
+@keyframes spin {
+    100% { transform: rotate(360deg); }
+}
+
+/* Íconos en las tarjetas de servicios */
+.icono-servicio {
+    font-size: 2.5rem;
+    color: var(--celeste);
+    margin-bottom: 1rem;
+}
+
+/* Estilo del botón del formulario con el ícono de WhatsApp */
+#formulario-contacto button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background-color: #25d366; /* Verde oficial de WhatsApp */
+}
+
+#formulario-contacto button:hover {
+    background-color: #1ebd58;
+}
+
+/* Botón Flotante de WhatsApp */
+.btn-flotante-wp {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 40px;
+    right: 40px;
+    background-color: #25d366;
+    color: #fff;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 35px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.btn-flotante-wp:hover {
+    transform: scale(1.1);
+    background-color: #1ebd58;
+    color: #fff;
+}
+
+/* Ajuste del botón flotante para pantallas pequeñas */
+@media (max-width: 768px) {
+    .btn-flotante-wp {
+        bottom: 20px;
+        right: 20px;
+        width: 50px;
+        height: 50px;
+        font-size: 28px;
+    }
+}
