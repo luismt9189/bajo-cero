@@ -159,6 +159,93 @@ header nav a:hover {
     color: #666;
 }
 
+/* --- Sección Galería --- */
+.galeria {
+    padding: 5rem 5%;
+    background-color: var(--blanco);
+    text-align: center;
+}
+
+.galeria h2 {
+    font-size: 2.2rem;
+    color: var(--azul-oscuro);
+    margin-bottom: 0.5rem;
+}
+
+.subtitulo-galeria {
+    color: #666;
+    margin-bottom: 2rem;
+}
+
+/* Filtros */
+.filtros-galeria {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+}
+
+.btn-filtro {
+    background-color: var(--gris-claro);
+    color: var(--azul-oscuro);
+    border: 2px solid var(--azul-claro);
+    padding: 0.6rem 1.5rem;
+    font-size: 0.95rem;
+    font-weight: bold;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-filtro:hover, 
+.btn-filtro.activo {
+    background-color: var(--celeste);
+    color: var(--blanco);
+    border-color: var(--celeste);
+    box-shadow: 0 4px 10px rgba(0, 168, 232, 0.2);
+}
+
+/* Grid de Imágenes */
+.contenedor-galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.item-galeria {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    aspect-ratio: 4/3; /* Mantiene las fotos con proporciones uniformes */
+    transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+.item-galeria img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajusta la foto sin deformarla */
+    transition: transform 0.5s ease;
+}
+
+/* Efecto Hover en las imágenes */
+.item-galeria:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 45, 98, 0.15);
+}
+
+.item-galeria:hover img {
+    transform: scale(1.08);
+}
+
+/* Clase para ocultar imágenes filtradas */
+.item-galeria.ocultar {
+    display: none;
+}
+
+
 /* Sección de Contacto */
 .contacto {
     padding: 5rem 5%;
